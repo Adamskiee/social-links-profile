@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Inter Variable";
+  src: url("./assets/fonts/Inter-VariableFont_slnt,wght.ttf")
+    format("truetype-variations");
+  font-weight: 100 900;
+  font-style: oblique -10deg 0deg;
+  font-display: swap;
+}
+
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+
+  --font-size-p: 14px;
+
+  --font-inter: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-inter);
+  height: 100vh;
+  background-color: var(--grey-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--grey-800);
+  width: 100%;
+  max-width: 330px;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.3rem;
+  flex-direction: column;
+  align-items: center;
+}
+.card .profile-pic {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+.card > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.card .name {
+  color: var(--white);
+  font-size: 26px;
+  font-weight: 400;
+}
+.card .place {
+  color: var(--green);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.card .quote {
+  font-size: var(--font-size-p);
+  color: var(--white);
+}
+.card .socials {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+.card .social {
+  list-style: none;
+  background-color: var(--grey-700);
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.card .social:hover {
+  background-color: var(--green);
+  color: var(--grey-700);
+}
